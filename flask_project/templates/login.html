@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class = "row">
+  <div class = "login-box">
+  <form @submit.prevent= "login">
+    <h2> Login page</h2>
+    <div class="form-group">
+      <div class = "col-3">
+      <label for="exampleInputEmail1">Username</label>
+      <input type="username" class="form-control" placeholder="Enter username" v-model = "user.username">
+      <small class = "error-text"> {error} </small>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class = "col-3">
+      <label for=" exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" v-model = "user.password">
+      <small class = "error-text"> {error} </small>
+     </div>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+  </div>
+</div>
+
+{% endblock %}
+
